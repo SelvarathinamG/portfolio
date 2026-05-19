@@ -1,8 +1,6 @@
-import emoji from "react-easy-emoji";
 import {
   EducationType,
   ExperienceType,
-  FeedbackType,
   ProjectType,
   SkillsSectionType,
   SkillBarsType,
@@ -12,76 +10,122 @@ import {
 } from "./types/sections";
 
 export const greetings: GreetingsType = {
-  name: "Hanzla Tauqeer",
-  title: "Hi all, I'm Hanzla",
+  name: "Selvarathinam G",
+  title: "Hi, I'm Selvarathinam G",
   description:
-    "I'm a passionate Full Stack web developer with experience developing Full Stack web applications with Python, Django, React.js, and Cloud Technologies. I am strongly interested in learning new technologies and implementing them in my projects. I'm a self-motivated and hardworking individual who is always ready to learn new things and work in a team.",
-  resumeLink: "#",
+    "Adaptive and goal-focused Information Technology student with a strong interest in full-stack development, AI-driven applications, and practical problem solving. I enjoy building responsive interfaces, reliable backends, and useful projects that make everyday tasks easier.",
+  resumeLink: "https://drive.google.com/file/d/1ep-m0NM7TcCWGbT2Eoe72gqUzJdA7vi3/view?usp=sharing",
 };
 
 export const openSource = {
-  githubUserName: "1hanzla100",
+  githubUserName: "SelvarathinamG",
 };
 
-export const contact = {};
+export const contact = {
+  title: "Send Me a Message",
+  description:
+    "Use the form below to reach me about opportunities, projects, or collaboration. If you prefer, you can also email me directly.",
+  emailLabel: "selvarathinamganapathi@gmail.com",
+};
 
 export const socialLinks: SocialLinksType = {
-  email: "mailto:hanzla.tauqeer123@gmail.com",
-  linkedin: "https://www.linkedin.com/in/1hanzla100/",
-  github: "https://github.com/1hanzla100",
-  instagram: "https://www.instagram.com/__hanzla100",
+  email: "mailto:selvarathinamganapathi@gmail.com",
+  linkedin: "https://www.linkedin.com/in/selvarathinam-g-66863b298/",
+  github: "https://github.com/SelvarathinamG",
+  instagram: "https://www.instagram.com/soul_of._.single/",
   // facebook: 'https://www.facebook.com/1hanzla100',
   // twitter: 'https://twitter.com/1hanzla100',
 };
 
 export const skillsSection: SkillsSectionType = {
-  title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  title: "Skills",
+  subTitle: "Languages, frameworks, and tools I use to build web, mobile, and AI-focused projects.",
   data: [
     {
-      title: "Full Stack Development",
+      title: "Development Stack",
       lottieAnimationFile: "/lottie/skills/fullstack.json", // Path of Lottie Animation JSON File
       skills: [
-        emoji("⚡ Building responsive Single-Page-Apps (SPA) & PWA in React.js"),
-        emoji("⚡ Building responsive static websites using Next.js"),
-        emoji("⚡ Building RESTful APIs in Django & Django REST Framework"),
+        "⚡ Programming in Java, Python, JavaScript, and C",
+        "⚡ Building responsive UIs with React, HTML5, CSS3, and Tailwind CSS",
+        "⚡ Creating backend services and REST APIs with Node.js and FastAPI",
+        "⚡ Working with Flutter, MySQL, Firebase, NumPy, and Pandas",
       ],
       softwareSkills: [
         {
-          skillName: "Python",
-          iconifyTag: "logos:python",
+          skillName: "Java",
+          iconifyTag: "logos:java",
         },
         {
-          skillName: "Django",
-          iconifyTag: "vscode-icons:file-type-django",
+          skillName: "Python",
+          iconifyTag: "logos:python",
         },
         {
           skillName: "JavaScript",
           iconifyTag: "logos:javascript",
         },
         {
-          skillName: "Reactjs",
-          iconifyTag: "vscode-icons:file-type-reactjs",
+          skillName: "React",
+          iconifyTag: "logos:react",
         },
         {
-          skillName: "Nextjs",
-          iconifyTag: "vscode-icons:file-type-light-next",
+          skillName: "Tailwind CSS",
+          iconifyTag: "logos:tailwindcss-icon",
         },
         {
-          skillName: "AWS",
-          iconifyTag: "logos:aws",
+          skillName: "Flutter",
+          iconifyTag: "logos:flutter",
         },
         {
-          skillName: "Heroku",
-          iconifyTag: "logos:heroku-icon",
+          skillName: "Node.js",
+          iconifyTag: "logos:nodejs-icon",
         },
         {
-          skillName: "Github",
-          iconifyTag: "akar-icons:github-fill",
+          skillName: "MySQL",
+          iconifyTag: "logos:mysql",
         },
         {
-          skillName: "Docker",
-          iconifyTag: "logos:docker-icon",
+          skillName: "Firebase",
+          iconifyTag: "logos:firebase",
+        },
+      ],
+    },
+    {
+      title: "Tools & Collaboration",
+      lottieAnimationFile: "/lottie/skills/cloudinfra.json",
+      skills: [
+        "⚡ Using Git, VS Code, and Postman for development workflows",
+        "⚡ Deploying projects with Netlify and Render",
+        "⚡ Designing and presenting ideas with Figma and Canva",
+        "⚡ Working with teams in remote and collaborative environments",
+      ],
+      softwareSkills: [
+        {
+          skillName: "Git",
+          iconifyTag: "simple-icons:git",
+        },
+        {
+          skillName: "VS Code",
+          iconifyTag: "logos:visual-studio-code",
+        },
+        {
+          skillName: "Postman",
+          iconifyTag: "logos:postman-icon",
+        },
+        {
+          skillName: "Figma",
+          iconifyTag: "logos:figma",
+        },
+        {
+          skillName: "Canva",
+          iconifyTag: "logos:canva",
+        },
+        {
+          skillName: "Netlify",
+          iconifyTag: "logos:netlify",
+        },
+        {
+          skillName: "Render",
+          iconifyTag: "simple-icons:render",
         },
       ],
     },
@@ -90,124 +134,102 @@ export const skillsSection: SkillsSectionType = {
 
 export const SkillBars: SkillBarsType[] = [
   {
-    Stack: "Frontend/Design", //Insert stack or technology you have experience in
-    progressPercentage: "85", //Insert relative proficiency in percentage
+    Stack: "Frontend & UI",
+    progressPercentage: "88",
   },
   {
-    Stack: "Backend",
+    Stack: "Backend & APIs",
+    progressPercentage: "84",
+  },
+  {
+    Stack: "Tools & Collaboration",
     progressPercentage: "90",
-  },
-  {
-    Stack: "Programming",
-    progressPercentage: "95",
   },
 ];
 
 export const educationInfo: EducationType[] = [
   {
-    schoolName: "University of Central Punjab",
-    subHeader: "Bachelor of Science in Computer Science",
-    duration: "September 2017 - April 2020",
-    desc: "",
-    grade: "Grade A",
+    schoolName: "Sri Manakula Vinayagar Engineering College, Puducherry",
+    subHeader: "B.Tech - Information Technology",
+    duration: "2023 - 2027",
+    desc: "Focused on software development, problem solving, and building practical technology projects.",
+    grade: "CGPA 7.80",
     descBullets: [], // Array of Strings
+  },
+  {
+    schoolName: "Krishnasamy Matriculation Higher Secondary School of Excellence, Cuddalore",
+    subHeader: "HSC - 12th",
+    duration: "2022 - 2023",
+    desc: "Higher secondary studies with a strong academic foundation.",
+    grade: "65.5%",
+    descBullets: [],
+  },
+  {
+    schoolName: "Krishnasamy Matriculation Higher Secondary School of Excellence, Cuddalore",
+    subHeader: "SSC - 10th",
+    duration: "2020 - 2021",
+    desc: "Secondary school completion with consistent academic performance.",
+    grade: "Passed",
+    descBullets: [],
   },
 ];
 
 export const experience: ExperienceType[] = [
   {
-    role: "Django Developer",
-    company: "Meganos Software",
-    companyLogo: "/img/icons/common/meganos.png",
-    date: "Aug 2022 - Present",
-    desc: "I crafted backends for diverse web apps, APIs, and WebSockets in e-commerce, podcasts, and property management. Managed server upkeep, deployments on Linux, Heroku, and AWS S3. Implemented PyTest for automated unit and integration testing, slashing 4 hours of manual testing each sprint, fortifying a dependable and flawless code foundation.",
-  },
-  {
-    role: "Full Stack Developer",
-    company: "Duseca Software",
-    companyLogo: "/img/icons/common/duseca_software_logo.jpeg",
-    date: "Jan 2022 - Sept 2023",
-    desc: "Crafted robust mobile application backends employing Django, Python, and REST APIs. Leveraged Django REST Framework, PostgreSQL, AWS, Firebase, Stripe, and WebSocket for efficient development. Collaborated across teams to surpass client expectations. Designed intuitive UIs, empowering clients to effortlessly manage their applications with a visually captivating interface.",
-    // descBullets: [
-    // 	"Lorem ipsum dolor sit amet, consdfgectetur adipiscing elit",
-    // 	"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    // ],
-  },
-  {
-    role: "Full Stack Developer",
-    company: "ZRTechnologies",
-    companyLogo: "/img/icons/common/zrtech.jpeg",
-    date: "Aug 2022 - Jun 2023",
-    desc: "Crafting diverse web applications, I've elevated functionality and user engagement. Spearheaded Visual Portfolio, leveraging AI for captivating presentations from parsed text. Proficiently set up and optimized applications on Linux servers, guaranteeing smooth scalability and top-notch performance for seamless user experiences.",
-  },
-  {
-    role: "Backend Developer",
-    company: "Bleed-AI",
-    companyLogo: "/img/icons/common/bleedAI.jpg",
-    date: "Sept 2021 - Oct 2021",
-    desc: "As a Django developer at Bleed AI, I integrated a computer vision AI model to process YouTube URLs on a website. I used Django Channels and Websockets to show real-time processing and implemented threading to run multiple instances of the AI model. I also used jQuery for UI rendering and deployed the website on a Heroku server.",
+    role: "Software Developer Intern",
+    company: "DevTechAI",
+    companyLogo: "https://www.devtechai.org/favicon.ico",
+    date: "Jun 2025 - Jan 2026",
+    desc: "Working as a part-time Software Developer Intern on front-end development, Java, and related web technologies. I contribute to responsive interfaces, remote collaboration, and product-focused development work.",
+    descBullets: [
+      "Building and refining front-end features for internal and client-facing products.",
+      "Collaborating with a remote team while learning practical engineering workflows.",
+      "Working across Java and web technologies to support product delivery.",
+    ],
   },
 ];
 
 export const projects: ProjectType[] = [
   {
-    name: "developer-portfolio",
-    desc: "Software Developer Portfolio Template built with react.js and next.js bootstrap that helps you showcase your work and skills as a software developer.",
-    github: "https://github.com/1hanzla100/developer-portfolio",
-    link: "https://developer-portfolio-1hanzla100.vercel.app/",
+    name: "Competitor Monitor AI",
+    desc: "AI-powered market intelligence platform for competitor tracking, trend analysis, and actionable business insights.",
+    image: "https://opengraph.githubassets.com/1/SelvarathinamG/Competitor-Monitor-AI",
+    github: "https://github.com/SelvarathinamG/Competitor-Monitor-AI",
   },
   {
-    name: "Giebo",
-    desc: "A Podcast Platform where creators can easily publish and sell their podcasts, and users can purchase with Handcash BitcoinSV, the future of fast and secure transactions.",
-    link: "https://gibeo.io/",
+    name: "smartvendors",
+    desc: "A vendor-focused project for organizing products, workflows, and operational data in a simple, practical interface.",
+    image: "https://opengraph.githubassets.com/1/SelvarathinamG/smartvendors",
+    github: "https://github.com/SelvarathinamG/smartvendors",
   },
   {
-    name: "O Mejor Oferta",
-    desc: "O Mejor Oferta is a mobile marketplace for buying and selling items nearby, helping users find deals on things they want and make money from items they no longer need.",
-    link: "https://play.google.com/store/apps/details?id=com.duseca.mejor_oferta",
+    name: "AlcoSecure",
+    desc: "A responsible drinking initiative that tracks alcohol purchases with QR-based identity verification and enforces daily consumption limits.",
+    image: "https://opengraph.githubassets.com/1/SelvarathinamG/AlcoSecure",
+    github: "https://github.com/SelvarathinamG/AlcoSecure",
   },
   {
-    name: "Hooligan Culture",
-    desc: "A Ecommerce Platform, where shopping meets the future! With HandCash BitcoinSV integration, you can authenticate and purchase products with ease and confidence.",
-    link: "https://hooliganculture.com/",
-  },
-];
-
-export const feedbacks: FeedbackType[] = [
-  {
-    name: "Syed Jamal",
-    role: "Frontend Developer at Meganos Software",
-    feedback:
-      "You were a wonderful addition to our team, alhumdulillah. I'm quite impressed with your abilities and professional practices. You approach problems from a unique perspective and always ask the right question. Finding a good teammate like Hanzla is extremely difficult. He has contributed to the growth of our organization and continues to do so. May Allah bless you with everything you desire.",
-  },
-  {
-    name: "Wajahat Malek",
-    role: "CEO at Duseca Software",
-    feedback:
-      "Hanzla has a deep understanding of web development technologies and is adept at using them to build scalable, robust, and secure web applications. He has worked on various projects, ranging from small-scale to large-scale, and has shown his ability to work collaboratively with others while maintaining a high level of productivity and quality. Hanzla is a pleasure to work with, and I have no doubt that he will be an asset to any team or organization. I highly recommend Hanzla for any Full Stack Django, React.js, or Blockchain development projects, and I wish him all the best in his future endeavors.",
-  },
-  {
-    name: "Zaid Zaffar",
-    role: "CEO at ZR Technologies",
-    feedback:
-      "Very skilled at what he does and has an in depth knowledge of Django and he's always ready to handle any challenges thrown at him. He's been a valuable member of my team and i look forward to working with him in the years to come",
+    name: "FITNESSPRO_DJANGO",
+    desc: "A role-based gym management system built with Django for workout plans, diet plans, attendance, and secure admin workflows.",
+    image: "https://opengraph.githubassets.com/1/SelvarathinamG/FITNESSPRO_DJANGO",
+    github: "https://github.com/SelvarathinamG/FITNESSPRO_DJANGO",
   },
 ];
 
 // See object prototype on /types/section.ts page
 export const seoData: SEODataType = {
-  title: "Hanzla Tauqeer",
+  title: "Selvarathinam G",
   description: greetings.description,
-  author: "Hanzla Tauqeer",
-  image: "https://avatars.githubusercontent.com/u/59178380?v=4",
-  url: "https://developer-portfolio-1hanzla100.vercel.app",
+  author: "Selvarathinam G",
+  image: "https://github.com/SelvarathinamG.png",
+  url: "https://github.com/SelvarathinamG",
   keywords: [
-    "Hanzla",
-    "Hanzla Tauqeer",
-    "@1hanzla100",
-    "1hanzla100",
+    "Selvarathinam G",
+    "Selvarathinam",
     "Portfolio",
-    "Hanzla Portfolio ",
-    "Hanzla Tauqeer Portfolio",
+    "Software Developer",
+    "React",
+    "Django",
+    "Flutter",
   ],
 };

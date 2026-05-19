@@ -25,12 +25,16 @@ const Greetings = () => {
             <span />
             <span />
           </div>
-          <Container className="py-lg-md d-flex">
+          <Container fluid className="py-lg-md d-flex">
             <div className="col px-0">
               <Row>
                 <Col lg="6">
-                  <h1 className="display-3 text-white">{greetings.title + " "}</h1>
-                  <p className="lead text-white">{greetings.description}</p>
+                  <h1 className="display-3" style={{ color: "#0b1220" }}>
+                    {greetings.title + " "}
+                  </h1>
+                  <p className="lead" style={{ color: "#1f2937" }}>
+                    {greetings.description}
+                  </p>
                   <SocialLinks />
                   {greetings.resumeLink && (
                     <div className="btn-wrapper my-4">

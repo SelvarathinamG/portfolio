@@ -3,15 +3,9 @@
 
 ## Software Developer Portfolio Template built with Next.js, bootstrap that helps you showcase your work and skills as a software developer.
 
-<p align="center">
-  <kbd>
-    <img src="https://github.com/1hanzla100/developer-portfolio/blob/master/picture.PNG"></img>
-  </kbd>
-</p>
-
 ## To view a live example, **[click here](https://developer-portfolio-1hanzla100.vercel.app/)**.
 
-Just Edit `portfolio.js` to get your personal portfolio. Feel free to use it as-is or customize it as much as you want.
+Just edit `portfolio.ts` to get your personal portfolio. Feel free to use it as-is or customize it as much as you want.
 
 But if you want to **contribute** and make this much better for other developers have a look at
 [Issues](https://github.com/1hanzla100/developer-portfolio/issues).
@@ -61,21 +55,21 @@ $ cd developer-portfolio
 3. Install dependencies
 
 ```bash
-$ yarn
+$ npm install --legacy-peer-deps
 ```
 
-4. Edit `portfolio.js`
+4. Edit `portfolio.ts`
 
 5. Start your development server
 
 ```bash
-$ yarn dev
+$ npm run dev
 ```
 
 ## Linking Portfolio to Github
 
 ```javascript
-  //  portfolio.js
+  //  portfolio.ts
   githubUserName: 'YOUR GITHUB USERNAME HERE',
 ```
 

@@ -76,14 +76,8 @@ export type ExperienceType = {
 export type ProjectType = {
   name: string;
   desc: string;
+  image?: string;
   github?: string;
   link?: string;
 };
 
-// * FEEDBACK SECTION
-
-export type FeedbackType = {
-  name: string;
-  role: string;
-  feedback: string;
-};
