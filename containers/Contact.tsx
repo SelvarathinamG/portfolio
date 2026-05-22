@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button, Card, CardBody, Col, Container, Form, FormGroup, Input, Row } from "reactstrap";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import emailjs from "@emailjs/browser";
 import { contact, socialLinks } from "../portfolio";
 import SocialLinks from "../components/SocialLinks";
@@ -75,7 +75,7 @@ const Contact = () => {
   };
 
   return (
-    <Fade bottom duration={2000}>
+    <Fade duration={2000} triggerOnce>
       <section className="section section-lg">
         <Container>
           <div className="d-flex p-4">

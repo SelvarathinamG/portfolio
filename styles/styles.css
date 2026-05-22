@@ -1,3 +1,31 @@
 body > div:first-child {
   overflow-x: hidden;
 }
+
+/* Custom overrides to match larger hero and project visuals */
+.display-3 {
+  font-size: 3.5rem !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+}
+
+.lead {
+  font-size: 1.25rem !important;
+  color: #1f2937 !important;
+}
+
+.card h3,
+.card .h3 {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+}
+
+/* Slightly larger project card body and spacing */
+.shadow-lg--hover {
+  padding: 1.2rem !important;
+}
+
+@media (min-width: 992px) {
+  .display-3 { font-size: 4.25rem !important; }
+  .card h3 { font-size: 1.75rem !important; }
+}

@@ -2,12 +2,12 @@ import React from "react";
 import { projects } from "../portfolio";
 import { Container, Row } from "reactstrap";
 import ProjectsCard from "../components/ProjectsCard";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 
 const Projects = () => {
   return (
     projects && (
-      <Fade bottom duration={2000}>
+      <Fade duration={2000} triggerOnce>
         <section className="section section-lg">
           <Container>
             <div className="d-flex p-4">

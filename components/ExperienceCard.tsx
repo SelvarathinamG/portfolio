@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardBody, CardTitle, CardSubtitle, CardText, Col } from "reactstrap";
-import Fade from "react-reveal/Fade";
+
 import { ExperienceType } from "../types/sections";
 
 const ExperienceCard = ({ companyLogo, company, role, date, desc, descBullets }: ExperienceType) => {
