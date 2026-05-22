@@ -29,3 +29,54 @@ body > div:first-child {
   .display-3 { font-size: 4.25rem !important; }
   .card h3 { font-size: 1.75rem !important; }
 }
+
+/* Center hero content vertically and add left padding similar to friend's layout */
+.section-shaped .col {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+}
+
+.section-shaped .col > .row {
+  width: 100%;
+}
+
+/* Increase left gutter on hero text for wider screens */
+@media (min-width: 992px) {
+  .section-shaped .col > .row > .col:first-child {
+    padding-left: 6rem !important;
+  }
+}
+
+/* Make social icon buttons larger and more prominent */
+.btn-icon-only.rounded-circle {
+  width: 48px !important;
+  height: 48px !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.btn-icon-only .btn-inner--icon i {
+  font-size: 18px !important;
+}
+
+/* Bigger resume button */
+.btn-white.btn-icon .btn-inner--text,
+.btn-white .btn-inner--text {
+  font-size: 1rem !important;
+  padding: 0.8rem 1.1rem !important;
+}
+
+/* Wider hero container to match friend layout */
+.section-shaped .col.px-0 > .row > .col {
+  max-width: 1180px;
+}
+
+/* Improve spacing for hero and projects */
+.section.section-shaped {
+  padding-top: 6rem !important;
+}
+.card {
+  border-radius: 0.6rem !important;
+}
