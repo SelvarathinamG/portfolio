@@ -44,7 +44,9 @@ body > div:first-child {
 /* Increase left gutter on hero text for wider screens */
 @media (min-width: 992px) {
   .section-shaped .col > .row > .col:first-child {
-    padding-left: 6rem !important;
+    padding-left: 9rem !important;
+    /* limit the text column width so the paragraph wraps similarly to the reference */
+    max-width: 680px !important;
   }
 }
 
@@ -71,6 +73,18 @@ body > div:first-child {
 /* Wider hero container to match friend layout */
 .section-shaped .col.px-0 > .row > .col {
   max-width: 1180px;
+}
+
+/* Narrow the paragraph area and increase readability */
+.section-shaped .col > .row > .col:first-child .lead {
+  max-width: 560px;
+  margin-top: 1.1rem !important;
+  line-height: 1.85 !important;
+}
+
+/* Slightly taller hero to better center content vertically */
+.section-shaped .col {
+  min-height: 620px;
 }
 
 /* Improve spacing for hero and projects */
