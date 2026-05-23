@@ -8,9 +8,9 @@ const Experience = () => {
   return (
     experience && (
       <Fade duration={2000} triggerOnce>
-        <section className="section section-lg">
-          <Container>
-            <div className="d-flex p-4">
+        <section className="section" style={{ paddingTop: "1.5rem", paddingBottom: "1.5rem" }}>
+          <Container style={{ maxWidth: 1140 }}>
+            <div className="d-flex p-3">
               <div>
                 <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-info">
                   <i className="ni ni-briefcase-24 text-info" />
@@ -20,7 +20,7 @@ const Experience = () => {
                 <h4 className="display-3 text-info">Experience</h4>
               </div>
             </div>
-            <Row className="row-grid align-items-start justify-content-center">
+            <Row className="row-grid align-items-start justify-content-center" style={{ marginTop: "0.5rem" }}>
               {experience.map((data, i) => {
                 return <ExperienceCard key={i} {...data} />;
               })}

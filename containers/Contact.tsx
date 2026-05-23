@@ -95,10 +95,10 @@ const Contact = () => {
   };
 
   return (
-    <Fade duration={2000} triggerOnce>
-      <section className="section section-lg">
+      <Fade duration={2000} triggerOnce>
+      <section className="section" style={{ paddingTop: "1.5rem", paddingBottom: "1.5rem" }}>
         <Container style={{ maxWidth: 1140 }}>
-          <div className="d-flex p-4 align-items-center">
+          <div className="d-flex p-3 align-items-center">
             <div>
               <div
                 className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-info"
@@ -128,7 +128,7 @@ const Contact = () => {
                       <p className="mb-2 font-weight-bold" style={{ fontSize: "1.5rem" }}>
                         Email
                        </p>
-                      <a className="text-white" href={socialLinks.email} style={{ fontSize: "0.9rem" }}>
+                      <a className="text-white" href={socialLinks.email} style={{ fontSize: "1rem" }}>
                         {contact.emailLabel}
                       </a>
                      

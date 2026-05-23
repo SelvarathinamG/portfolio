@@ -8,8 +8,8 @@ const Education = () => {
   return (
     educationInfo && (
       <Fade duration={1500} triggerOnce>
-        <section className="section pb-0 bg-gradient-info my-5">
-          <Container style={{ maxWidth: 1140 }}>
+        <section className="section pb-0 bg-gradient-info" style={{ marginTop: "1rem", marginBottom: "1rem" }}>
+          <Container style={{ maxWidth: 1140, paddingTop: "1.5rem", paddingBottom: "0.75rem" }}>
             <div className="d-flex px-3 align-items-center">
               <div>
                 <div
@@ -25,7 +25,7 @@ const Education = () => {
                 </h4>
               </div>
             </div>
-            <Row className="row-grid align-items-center">
+            <Row className="row-grid align-items-center" style={{ marginTop: "0.5rem" }}>
               {educationInfo.map(info => {
                 return (
                   <Col className="order-lg-1" lg="6" key={`${info.schoolName}-${info.duration}`}>

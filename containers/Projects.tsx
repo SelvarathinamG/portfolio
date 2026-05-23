@@ -8,9 +8,9 @@ const Projects = () => {
   return (
     projects && (
       <Fade duration={2000} triggerOnce>
-        <section className="section section-lg">
+        <section className="section" style={{ paddingTop: "1.5rem", paddingBottom: "1.5rem" }}>
           <Container style={{ maxWidth: 1140 }}>
-            <div className="d-flex p-4 align-items-center">
+            <div className="d-flex p-3 align-items-center">
               <div>
                 <div
                   className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-info"
@@ -25,7 +25,7 @@ const Projects = () => {
                 </h4>
               </div>
             </div>
-            <Row className="row-grid align-items-center">
+            <Row className="row-grid align-items-center" style={{ marginTop: "0.5rem" }}>
               {projects.map((data, i) => {
                 return <ProjectsCard key={i} {...data} />;
               })}

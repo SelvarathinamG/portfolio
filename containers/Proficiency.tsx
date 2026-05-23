@@ -7,7 +7,7 @@ import GreetingLottie from "../components/DisplayLottie";
 const Proficiency = () => {
   return (
     SkillBars && (
-      <Container className="section section-lg" style={{ maxWidth: 1140 }}>
+      <Container className="section" style={{ maxWidth: 1140, paddingTop: "1.5rem", paddingBottom: "1.5rem", marginTop: "1rem", marginBottom: "1rem" }}>
         <Fade duration={2000} triggerOnce>
           <Row>
             <Col lg="6">

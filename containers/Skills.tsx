@@ -9,7 +9,10 @@ const Skills = () => {
   return (
     skillsSection && (
       <Fade duration={2000} triggerOnce>
-        <Container className="text-center my-5 section section-lg" style={{ maxWidth: 1140 }}>
+        <Container
+          className="text-center section"
+          style={{ maxWidth: 1140, paddingTop: "1.5rem", paddingBottom: "1.5rem", marginTop: "1rem", marginBottom: "1rem" }}
+        >
           <h1 className="h1" style={{ fontSize: "clamp(2.5rem, 3vw, 3.2rem)" }}>
             {skillsSection.title}
           </h1>
@@ -18,7 +21,7 @@ const Skills = () => {
           </p>
           {skillsSection.data.map((section, index) => {
             return (
-              <Row className="my-5 align-items-center" key={index}>
+              <Row className="my-4 align-items-center" key={index}>
                 <Col lg="6" className="order-2 order-lg-1">
                   <DisplayLottie animationPath={section.lottieAnimationFile} />
                 </Col>
