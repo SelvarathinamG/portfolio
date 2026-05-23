@@ -25,7 +25,7 @@ const Projects = () => {
                 </h4>
               </div>
             </div>
-            <Row className="row-grid align-items-center" style={{ marginTop: "0.5rem" }}>
+            <Row className="row-grid align-items-stretch" style={{ marginTop: "0.5rem" }}>
               {projects.map((data, i) => {
                 return <ProjectsCard key={i} {...data} />;
               })}

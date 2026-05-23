@@ -191,13 +191,13 @@ export const experience: ExperienceType[] = [
 export const projects: ProjectType[] = [
   {
     name: "Competitor Monitor AI",
-    desc: "AI-powered market intelligence platform for competitor tracking, trend analysis, and actionable business insights.",
+    desc: "A full-stack AI-powered market intelligence platform that tracks competitors, analyzes trends, and delivers actionable business insights through dashboards, alerts, and visualizations.",
     image: "https://opengraph.githubassets.com/1/SelvarathinamG/Competitor-Monitor-AI",
     github: "https://github.com/SelvarathinamG/Competitor-Monitor-AI",
   },
   {
     name: "smartvendors",
-    desc: "A vendor-focused project for organizing products, workflows, and operational data in a simple, practical interface.",
+    desc: "A vendor management web application that organizes products and workflows, streamlines inventory and order processing, and provides intuitive vendor and admin interfaces for efficient operations.",
     image: "https://opengraph.githubassets.com/1/SelvarathinamG/smartvendors",
     github: "https://github.com/SelvarathinamG/smartvendors",
   },
