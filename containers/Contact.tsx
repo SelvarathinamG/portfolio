@@ -12,7 +12,8 @@ type ContactFormState = {
 };
 
 const formatTimestampIST = () => {
-  return new Intl.DateTimeFormat("en-US", {
+  const date = new Date();
+  const formatter = new Intl.DateTimeFormat("en-GB", {
     timeZone: "Asia/Kolkata",
     weekday: "long",
     day: "2-digit",
@@ -22,7 +23,21 @@ const formatTimestampIST = () => {
     minute: "2-digit",
     second: "2-digit",
     hour12: true,
-  }).format(new Date());
+  });
+
+  const parts = formatter.formatToParts(date);
+  const lookup = (type: string) => parts.find(part => part.type === type)?.value || "";
+
+  const day = lookup("day");
+  const month = lookup("month");
+  const year = lookup("year");
+  const weekday = lookup("weekday");
+  const hour = lookup("hour");
+  const minute = lookup("minute");
+  const second = lookup("second");
+  const dayPeriod = lookup("dayPeriod").toLowerCase();
+
+  return `${weekday} ${day} ${month}, ${year} at ${hour}:${minute}:${second} ${dayPeriod}`;
 };
 
 const initialState: ContactFormState = {
@@ -35,11 +50,22 @@ const initialState: ContactFormState = {
 const Contact = () => {
   const [formData, setFormData] = useState<ContactFormState>(initialState);
   const [isLoading, setIsLoading] = useState(false);
+  const [feedback, setFeedback] = useState<{ type: "success" | "error"; message: string } | null>(null);
 
   useEffect(() => {
     // Initialize EmailJS with public key
     emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "test_public_key");
   }, []);
+
+  useEffect(() => {
+    if (!feedback) return;
+
+    const timeout = window.setTimeout(() => {
+      setFeedback(null);
+    }, 4000);
+
+    return () => window.clearTimeout(timeout);
+  }, [feedback]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = event.target;
@@ -76,7 +102,7 @@ const Contact = () => {
 
       // Basic client-side validation
       if (!formData.name || !formData.email || !formData.message) {
-        alert("Please enter your name, email, and a message before sending.");
+        setFeedback({ type: "error", message: "Please enter your name, email, and a message before sending." });
         setIsLoading(false);
         return;
       }
@@ -116,15 +142,15 @@ const Contact = () => {
       const response = await emailjs.send(serviceID, templateID, templateParams);
 
       if (response && response.status === 200) {
-        alert("✓ Message sent successfully! I'll get back to you soon.");
+        setFeedback({ type: "success", message: "Message sent successfully! I'll get back to you soon." });
         setFormData(initialState);
       } else {
         console.warn("EmailJS unexpected response:", response);
-        alert("Failed to send message. Please try again.");
+        setFeedback({ type: "error", message: "Failed to send message. Please try again." });
       }
     } catch (error) {
       console.error("Error sending message:", error);
-      alert("Failed to send message. Please try again later.");
+      setFeedback({ type: "error", message: "Failed to send message. Please try again later." });
     } finally {
       setIsLoading(false);
     }
@@ -186,6 +212,22 @@ const Contact = () => {
                 </Col>
                 <Col lg="7">
                   <Form onSubmit={handleSubmit}>
+                    {feedback ? (
+                      <div
+                        style={{
+                          marginBottom: "1rem",
+                          padding: "0.9rem 1rem",
+                          borderRadius: 12,
+                          backgroundColor: feedback.type === "success" ? "#ecfdf3" : "#fef2f2",
+                          color: feedback.type === "success" ? "#166534" : "#991b1b",
+                          border: `1px solid ${feedback.type === "success" ? "#bbf7d0" : "#fecaca"}`,
+                          fontSize: "0.95rem",
+                          fontWeight: 600,
+                        }}
+                      >
+                        {feedback.message}
+                      </div>
+                    ) : null}
                     <Row>
                       <Col md="6">
                         <FormGroup>
@@ -249,7 +291,7 @@ const Contact = () => {
                       
                       {isLoading ? "Sending..." : "Send Message "}
                       <span className="btn-inner--icon mr-2">
-                        <i className="fa fa-rocket text-white" />
+                        <i className="fa fa-paper-plane text-white" />
                       </span>
                     </Button>
                   </Form>
