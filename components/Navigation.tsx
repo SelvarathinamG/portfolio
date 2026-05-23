@@ -19,7 +19,7 @@ const Navigation = () => {
     <>
       <header className="header-global">
         <Navbar className="navbar-main navbar-transparent navbar-light headroom" expand="lg" id="navbar-main">
-          <Container style={{ maxWidth: 1400 }}>
+          <Container style={{ maxWidth: 1140 }}>
             <NavbarBrand href="/" className="mr-lg-5">
               <h2 className="text-white" id="nav-title">
                 {greetings.name}
@@ -60,7 +60,7 @@ const Navigation = () => {
                       href={socialLinks.facebook}
                       target="_blank"
                     >
-                      <i className="fa fa-facebook-square" style={{ fontSize: "1.7rem" }} />
+                      <i className="fa fa-facebook-square" style={{ fontSize: "1.15rem" }} />
                       <span className="nav-link-inner--text d-lg-none ml-2">Facebook</span>
                     </NavLink>
                   </NavItem>
@@ -74,7 +74,7 @@ const Navigation = () => {
                       href={socialLinks.instagram}
                       target="_blank"
                     >
-                      <i className="fa fa-instagram" style={{ fontSize: "1.7rem" }} />
+                      <i className="fa fa-instagram" style={{ fontSize: "1.15rem" }} />
                       <span className="nav-link-inner--text d-lg-none ml-2">Instagram</span>
                     </NavLink>
                   </NavItem>
@@ -88,7 +88,7 @@ const Navigation = () => {
                       href={socialLinks.github}
                       target="_blank"
                     >
-                      <i className="fa fa-github" style={{ fontSize: "1.7rem" }} />
+                      <i className="fa fa-github" style={{ fontSize: "1.15rem" }} />
                       <span className="nav-link-inner--text d-lg-none ml-2">Github</span>
                     </NavLink>
                   </NavItem>
@@ -102,7 +102,7 @@ const Navigation = () => {
                       href={socialLinks.linkedin}
                       target="_blank"
                     >
-                      <i className="fa fa-linkedin" style={{ fontSize: "1.7rem" }} />
+                      <i className="fa fa-linkedin" style={{ fontSize: "1.15rem" }} />
                       <span className="nav-link-inner--text d-lg-none ml-2">Linkedin</span>
                     </NavLink>
                   </NavItem>

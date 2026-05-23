@@ -7,11 +7,11 @@ import GreetingLottie from "../components/DisplayLottie";
 const Proficiency = () => {
   return (
     SkillBars && (
-      <Container className="section section-lg" style={{ maxWidth: 1500 }}>
+      <Container className="section section-lg" style={{ maxWidth: 1140 }}>
         <Fade duration={2000} triggerOnce>
           <Row>
             <Col lg="6">
-              <h1 className="h1" style={{ fontSize: "clamp(3rem, 4vw, 4.2rem)" }}>
+              <h1 className="h1" style={{ fontSize: "clamp(2.2rem, 3vw, 3rem)" }}>
                 Proficiency
               </h1>
               {SkillBars.map(skill => {

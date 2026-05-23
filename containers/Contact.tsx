@@ -98,18 +98,18 @@ const Contact = () => {
   return (
     <Fade duration={2000} triggerOnce>
       <section className="section section-lg">
-        <Container style={{ maxWidth: 1500 }}>
+        <Container style={{ maxWidth: 1140 }}>
           <div className="d-flex p-4 align-items-center">
             <div>
               <div
                 className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-info"
-                style={{ width: 88, height: 88 }}
+                style={{ width: 72, height: 72 }}
               >
-                <i className="ni ni-email-83 text-info" style={{ fontSize: "2rem" }} />
+                <i className="ni ni-email-83 text-info" style={{ fontSize: "1.5rem" }} />
               </div>
             </div>
             <div className="pl-4">
-              <h4 className="display-3 text-info" style={{ fontSize: "clamp(3.4rem, 4.5vw, 4.8rem)" }}>
+              <h4 className="display-3 text-info" style={{ fontSize: "clamp(2.2rem, 3vw, 3rem)" }}>
                 {contact.title}
               </h4>
             </div>
@@ -119,14 +119,14 @@ const Contact = () => {
               <Row className="align-items-stretch">
                 <Col lg="5" className="mb-4 mb-lg-0">
                   <div className="h-100 bg-gradient-info text-white rounded-lg p-4 p-lg-5">
-                    <h3 className="text-white" style={{ fontSize: "2.2rem" }}>
+                    <h3 className="text-white" style={{ fontSize: "1.7rem" }}>
                       Let’s build something useful.
                     </h3>
-                    <p className="mt-3 text-white opacity-8" style={{ fontSize: "1.08rem", lineHeight: 1.8 }}>
+                    <p className="mt-3 text-white opacity-8" style={{ fontSize: "0.98rem", lineHeight: 1.7 }}>
                       {contact.description}
                     </p>
                     <div className="mt-4">
-                      <p className="mb-2 font-weight-bold" style={{ fontSize: "1.2rem" }}>
+                      <p className="mb-2 font-weight-bold" style={{ fontSize: "1rem" }}>
                         Email
                       </p>
                       <a className="text-white" href={socialLinks.email}>
@@ -134,7 +134,7 @@ const Contact = () => {
                       </a>
                     </div>
                     <div className="mt-4">
-                      <p className="mb-2 font-weight-bold" style={{ fontSize: "1.2rem" }}>
+                      <p className="mb-2 font-weight-bold" style={{ fontSize: "1rem" }}>
                         Social Links
                       </p>
                       <SocialLinks />

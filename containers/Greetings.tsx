@@ -7,20 +7,20 @@ import SocialLinks from "../components/SocialLinks";
 const Greetings = () => {
   const heroTitleStyle = {
     color: "#ffffff",
-    fontSize: "clamp(2.4rem, 4vw, 3.2rem)",
+    fontSize: "clamp(2rem, 3vw, 2.6rem)",
     lineHeight: 1.02,
   };
 
   const heroDescriptionStyle = {
     color: "#ffffff",
-    fontSize: "clamp(1.35rem, 1.9vw, 1.65rem)",
-    lineHeight: 1.8,
-    maxWidth: "42rem",
+    fontSize: "clamp(1rem, 1.2vw, 1.2rem)",
+    lineHeight: 1.7,
+    maxWidth: "38rem",
   };
 
   const heroResumeButtonStyle = {
-    padding: "1.1rem 1.55rem",
-    fontSize: "1.08rem",
+    padding: "0.8rem 1.15rem",
+    fontSize: "0.95rem",
   };
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const Greetings = () => {
             <span />
             <span />
           </div>
-          <Container style={{ maxWidth: 1200 }} className="py-lg-md">
+          <Container style={{ maxWidth: 1140 }} className="py-lg-md">
             <Row className="align-items-center justify-content-between" style={{ minHeight: "62vh" }}>
               <Col lg="5" className="hero-copy">
                 <h1 className="display-2" style={heroTitleStyle}>

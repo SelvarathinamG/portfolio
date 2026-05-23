@@ -4,13 +4,13 @@ import { socialLinks } from "../portfolio";
 
 const SocialLinks = () => {
   const socialButtonStyle = {
-    width: "4.6rem",
-    height: "4.6rem",
-    fontSize: "1.5rem",
+    width: "3.6rem",
+    height: "3.6rem",
+    fontSize: "1.15rem",
   };
 
   return (
-    <div className="btn-wrapper text-lg" style={{ marginTop: "1.5rem" }}>
+    <div className="btn-wrapper text-lg" style={{ marginTop: "1rem" }}>
       {socialLinks.email && (
         <Button
           className="btn-icon-only rounded-circle ml-1 hero-social-btn"
@@ -21,7 +21,7 @@ const SocialLinks = () => {
           target="_blank"
           style={socialButtonStyle}
         >
-          <span className="btn-inner--icon" style={{ fontSize: "1.5rem" }}>
+          <span className="btn-inner--icon" style={{ fontSize: "1.15rem" }}>
             <i className="fa fa-envelope" />
           </span>
         </Button>
@@ -36,7 +36,7 @@ const SocialLinks = () => {
           target="_blank"
           style={socialButtonStyle}
         >
-          <span className="btn-inner--icon" style={{ fontSize: "1.5rem" }}>
+          <span className="btn-inner--icon" style={{ fontSize: "1.15rem" }}>
             <i className="fa fa-linkedin" />
           </span>
         </Button>
@@ -51,7 +51,7 @@ const SocialLinks = () => {
           target="_blank"
           style={socialButtonStyle}
         >
-          <span className="btn-inner--icon" style={{ fontSize: "1.5rem" }}>
+          <span className="btn-inner--icon" style={{ fontSize: "1.15rem" }}>
             <i className="fa fa-github" />
           </span>
         </Button>
@@ -66,7 +66,7 @@ const SocialLinks = () => {
           aria-label="Instagram"
           style={socialButtonStyle}
         >
-          <span className="btn-inner--icon" style={{ fontSize: "1.5rem" }}>
+          <span className="btn-inner--icon" style={{ fontSize: "1.15rem" }}>
             <i className="fa fa-instagram" />
           </span>
         </Button>
@@ -81,7 +81,7 @@ const SocialLinks = () => {
           aria-label="Facebook"
           style={socialButtonStyle}
         >
-          <span className="btn-inner--icon" style={{ fontSize: "1.5rem" }}>
+          <span className="btn-inner--icon" style={{ fontSize: "1.15rem" }}>
             <i className="fa fa-facebook-square" />
           </span>
         </Button>
@@ -96,7 +96,7 @@ const SocialLinks = () => {
           aria-label="Twitter"
           style={socialButtonStyle}
         >
-          <span className="btn-inner--icon" style={{ fontSize: "1.5rem" }}>
+          <span className="btn-inner--icon" style={{ fontSize: "1.15rem" }}>
             <i className="fa fa-twitter" />
           </span>
         </Button>
