@@ -11,6 +11,20 @@ type ContactFormState = {
   message: string;
 };
 
+const formatTimestampIST = () => {
+  return new Intl.DateTimeFormat("en-US", {
+    timeZone: "Asia/Kolkata",
+    weekday: "long",
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+  }).format(new Date());
+};
+
 const initialState: ContactFormState = {
   name: "",
   email: "",
@@ -46,9 +60,15 @@ const Contact = () => {
 
       if (!serviceID || !templateID) {
         // Fallback: open mailto if EmailJS not configured
-        const subject = encodeURIComponent(formData.subject || `Portfolio message from ${formData.name}`);
+        const subject = encodeURIComponent(formData.subject || `New Contact Form Submission`);
         const body = encodeURIComponent(
-          `Name: ${formData.name}\nEmail: ${formData.email}\nSubject: ${formData.subject}\n\nMessage:\n${formData.message}`
+          `New Contact Form Submission\n\n` +
+            `Name: ${formData.name}\n` +
+            `Email: ${formData.email}\n\n` +
+            `Message:\n${formData.message}\n\n` +
+            `Timestamp (IST): ${formatTimestampIST()}\n\n` +
+            `---\n` +
+            `This email was sent from your portfolio contact form`
         );
         window.location.href = `mailto:${userEmail}?subject=${subject}&body=${body}`;
         return;
@@ -61,18 +81,34 @@ const Contact = () => {
         return;
       }
 
+      const timestampIST = formatTimestampIST();
+
       const templateParams = {
         to_email: userEmail,
-        name: formData.name,
-        email: formData.email,
-        subject: formData.subject || `Portfolio message from ${formData.name}`,
-        message: formData.message,
         from_name: formData.name,
         from_email: formData.email,
         reply_to: formData.email,
+        subject: formData.subject || "New Contact Form Submission",
+        message: formData.message,
+        email_content:
+          `New Contact Form Submission\n\n` +
+          `Name: ${formData.name}\n` +
+          `Email: ${formData.email}\n\n` +
+          `Message:\n${formData.message}\n\n` +
+          `Timestamp (IST): ${timestampIST}\n\n` +
+          `---\n` +
+          `This email was sent from your portfolio contact form`,
+        formatted_message:
+          `New Contact Form Submission\n\n` +
+          `Name: ${formData.name}\n` +
+          `Email: ${formData.email}\n\n` +
+          `Message:\n${formData.message}\n\n` +
+          `Timestamp (IST): ${timestampIST}\n\n` +
+          `---\n` +
+          `This email was sent from your portfolio contact form`,
+        timestamp_ist: timestampIST,
         sender_name: formData.name,
         sender_email: formData.email,
-        email_content: `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`,
       };
 
       console.debug("EmailJS sending with params:", templateParams);
