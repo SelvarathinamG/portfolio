@@ -125,15 +125,16 @@ const Contact = () => {
                       {contact.description}
                     </p>
                     <div className="mt-4">
-                      <p className="mb-2 font-weight-bold" style={{ fontSize: "0.8rem" }}>
+                      <p className="mb-2 font-weight-bold" style={{ fontSize: "1.5rem" }}>
                         Email
-                      </p>
-                      <a className="text-white" href={socialLinks.email}>
+                       </p>
+                      <a className="text-white" href={socialLinks.email} style={{ fontSize: "0.9rem" }}>
                         {contact.emailLabel}
                       </a>
+                     
                     </div>
                     <div className="mt-4">
-                      <p className="mb-2 font-weight-bold" style={{ fontSize: "0.8rem" }}>
+                      <p className="mb-2 font-weight-bold" style={{ fontSize: "1.5rem" }}>
                         Phone
                       </p>
                       <a
@@ -209,7 +210,11 @@ const Contact = () => {
                       />
                     </FormGroup>
                     <Button color="info" type="submit" size="lg" className="mt-2" disabled={isLoading}>
-                      {isLoading ? "Sending..." : "Send >"}
+                      
+                      {isLoading ? "Sending..." : "Send Message "}
+                      <span className="btn-inner--icon mr-2">
+                        <i className="fa fa-rocket text-white" />
+                      </span>
                     </Button>
                   </Form>
                 </Col>
