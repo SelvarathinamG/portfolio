@@ -9,15 +9,20 @@ const Education = () => {
     educationInfo && (
       <Fade duration={2000} triggerOnce>
         <section className="section pb-0 bg-gradient-info my-5">
-          <Container>
-            <div className="d-flex px-3">
+          <Container style={{ maxWidth: 1500 }}>
+            <div className="d-flex px-3 align-items-center">
               <div>
-                <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-info">
-                  <i className="ni ni-books text-info" />
+                <div
+                  className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-info"
+                  style={{ width: 88, height: 88 }}
+                >
+                  <i className="ni ni-books text-info" style={{ fontSize: "2rem" }} />
                 </div>
               </div>
               <div className="pl-4">
-                <h4 className="display-3 text-white">Education</h4>
+                <h4 className="display-3 text-white" style={{ fontSize: "clamp(3.4rem, 4.5vw, 4.8rem)" }}>
+                  Education
+                </h4>
               </div>
             </div>
             <Row className="row-grid align-items-center">

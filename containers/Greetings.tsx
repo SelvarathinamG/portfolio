@@ -5,6 +5,24 @@ import GreetingLottie from "../components/DisplayLottie";
 import SocialLinks from "../components/SocialLinks";
 
 const Greetings = () => {
+  const heroTitleStyle = {
+    color: "#ffffff",
+    fontSize: "clamp(2.4rem, 4vw, 3.2rem)",
+    lineHeight: 1.02,
+  };
+
+  const heroDescriptionStyle = {
+    color: "#ffffff",
+    fontSize: "clamp(1.35rem, 1.9vw, 1.65rem)",
+    lineHeight: 1.8,
+    maxWidth: "42rem",
+  };
+
+  const heroResumeButtonStyle = {
+    padding: "1.1rem 1.55rem",
+    fontSize: "1.08rem",
+  };
+
   useEffect(() => {
     document.documentElement.scrollTop = 0;
     document.scrollingElement!.scrollTop = 0;
@@ -25,37 +43,36 @@ const Greetings = () => {
             <span />
             <span />
           </div>
-          <Container fluid className="py-lg-md d-flex">
-            <div className="col px-0">
-              <Row>
-                <Col lg="6">
-                  <h1 className="display-3" style={{ color: "#0b1220" }}>
-                    {greetings.title + " "}
-                  </h1>
-                  <p className="lead" style={{ color: "#1f2937" }}>
-                    {greetings.description}
-                  </p>
-                  <SocialLinks />
-                  {greetings.resumeLink && (
-                    <div className="btn-wrapper my-4">
-                      <Button
-                        className="btn-white btn-icon mb-3 mb-sm-0 ml-1"
-                        color="default"
-                        href={greetings.resumeLink}
-                      >
-                        <span className="btn-inner--icon mr-1">
-                          <i className="fa fa-file" />
-                        </span>
-                        <span className="btn-inner--text">See My Resume</span>
-                      </Button>
-                    </div>
-                  )}
-                </Col>
-                <Col lg="6">
-                  <GreetingLottie animationPath="/lottie/coding.json" />
-                </Col>
-              </Row>
-            </div>
+          <Container style={{ maxWidth: 1500 }} className="py-lg-md">
+            <Row className="align-items-center justify-content-between" style={{ minHeight: "62vh" }}>
+              <Col lg="5" className="hero-copy">
+                <h1 className="display-2" style={heroTitleStyle}>
+                  {greetings.title + " "}
+                </h1>
+                <p className="lead" style={heroDescriptionStyle}>
+                  {greetings.description}
+                </p>
+                <SocialLinks />
+                {greetings.resumeLink && (
+                  <div className="btn-wrapper my-4">
+                    <Button
+                      className="btn-white btn-icon hero-resume-btn mb-3 mb-sm-0 ml-1"
+                      color="default"
+                      href={greetings.resumeLink}
+                      style={heroResumeButtonStyle}
+                    >
+                      <span className="btn-inner--icon mr-1">
+                        <i className="fa fa-file" />
+                      </span>
+                      <span className="btn-inner--text">See My Resume</span>
+                    </Button>
+                  </div>
+                )}
+              </Col>
+              <Col lg="6" className="hero-visual" style={{ display: "flex", alignItems: "center", justifyContent: "center", paddingTop: "1rem", paddingBottom: "1rem" }}>
+                <GreetingLottie animationPath="/lottie/coding.json" />
+              </Col>
+            </Row>
           </Container>
           {/* SVG separator */}
           <div className="separator separator-bottom separator-skew">

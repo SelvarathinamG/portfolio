@@ -8,12 +8,14 @@ import SocialLinks from "../components/SocialLinks";
 type ContactFormState = {
   name: string;
   email: string;
+  subject: string;
   message: string;
 };
 
 const initialState: ContactFormState = {
   name: "",
   email: "",
+  subject: "",
   message: "",
 };
 
@@ -45,9 +47,9 @@ const Contact = () => {
 
       if (!serviceID || !templateID) {
         // Fallback: open mailto if EmailJS not configured
-        const subject = encodeURIComponent(`Portfolio message from ${formData.name}`);
+        const subject = encodeURIComponent(formData.subject || `Portfolio message from ${formData.name}`);
         const body = encodeURIComponent(
-          `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+          `Name: ${formData.name}\nEmail: ${formData.email}\nSubject: ${formData.subject}\n\nMessage:\n${formData.message}`
         );
         window.location.href = `mailto:${userEmail}?subject=${subject}&body=${body}`;
         return;
@@ -55,9 +57,16 @@ const Contact = () => {
 
       const response = await emailjs.send(serviceID, templateID, {
         to_email: userEmail,
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
         from_name: formData.name,
         from_email: formData.email,
-        message: formData.message,
+        reply_to: formData.email,
+        sender_name: formData.name,
+        sender_email: formData.email,
+        email_content: `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`,
       });
 
       if (response.status === 200) {
@@ -77,15 +86,20 @@ const Contact = () => {
   return (
     <Fade duration={2000} triggerOnce>
       <section className="section section-lg">
-        <Container>
-          <div className="d-flex p-4">
+        <Container style={{ maxWidth: 1500 }}>
+          <div className="d-flex p-4 align-items-center">
             <div>
-              <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-info">
-                <i className="ni ni-email-83 text-info" />
+              <div
+                className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-info"
+                style={{ width: 88, height: 88 }}
+              >
+                <i className="ni ni-email-83 text-info" style={{ fontSize: "2rem" }} />
               </div>
             </div>
             <div className="pl-4">
-              <h4 className="display-3 text-info">{contact.title}</h4>
+              <h4 className="display-3 text-info" style={{ fontSize: "clamp(3.4rem, 4.5vw, 4.8rem)" }}>
+                {contact.title}
+              </h4>
             </div>
           </div>
           <Card className="shadow-lg border-0 overflow-hidden">
@@ -93,16 +107,24 @@ const Contact = () => {
               <Row className="align-items-stretch">
                 <Col lg="5" className="mb-4 mb-lg-0">
                   <div className="h-100 bg-gradient-info text-white rounded-lg p-4 p-lg-5">
-                    <h3 className="text-white">Let’s build something useful.</h3>
-                    <p className="mt-3 text-white opacity-8">{contact.description}</p>
+                    <h3 className="text-white" style={{ fontSize: "2.2rem" }}>
+                      Let’s build something useful.
+                    </h3>
+                    <p className="mt-3 text-white opacity-8" style={{ fontSize: "1.08rem", lineHeight: 1.8 }}>
+                      {contact.description}
+                    </p>
                     <div className="mt-4">
-                      <p className="mb-2 font-weight-bold">Email</p>
+                      <p className="mb-2 font-weight-bold" style={{ fontSize: "1.2rem" }}>
+                        Email
+                      </p>
                       <a className="text-white" href={socialLinks.email}>
                         {contact.emailLabel}
                       </a>
                     </div>
                     <div className="mt-4">
-                      <p className="mb-2 font-weight-bold">Social Links</p>
+                      <p className="mb-2 font-weight-bold" style={{ fontSize: "1.2rem" }}>
+                        Social Links
+                      </p>
                       <SocialLinks />
                     </div>
                   </div>
@@ -142,6 +164,19 @@ const Contact = () => {
                       </Col>
                     </Row>
                     <FormGroup>
+                      <label htmlFor="contact-subject" className="form-control-label">
+                        Subject
+                      </label>
+                      <Input
+                        id="contact-subject"
+                        name="subject"
+                        placeholder="Enter subject"
+                        type="text"
+                        value={formData.subject}
+                        onChange={handleChange}
+                      />
+                    </FormGroup>
+                    <FormGroup>
                       <label htmlFor="contact-message" className="form-control-label">
                         Message
                       </label>
@@ -150,13 +185,13 @@ const Contact = () => {
                         name="message"
                         placeholder="Write your message here"
                         type="textarea"
-                        rows="7"
+                        rows="8"
                         value={formData.message}
                         onChange={handleChange}
                       />
                     </FormGroup>
                     <Button color="info" type="submit" size="lg" className="mt-2" disabled={isLoading}>
-                      {isLoading ? "Sending..." : "Send Me a Message"}
+                      {isLoading ? "Sending..." : "Send >"}
                     </Button>
                   </Form>
                 </Col>

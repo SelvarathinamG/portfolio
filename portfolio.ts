@@ -11,7 +11,7 @@ import {
 
 export const greetings: GreetingsType = {
   name: "Selvarathinam G",
-  title: "Hi, I'm Selvarathinam G",
+  title: "Hi, I'm Selvarathinam.G",
   description:
     "Adaptive and goal-focused Information Technology student with a strong interest in full-stack development, AI-driven applications, and practical problem solving. I enjoy building responsive interfaces, reliable backends, and useful projects that make everyday tasks easier.",
   resumeLink: "https://drive.google.com/file/d/1ep-m0NM7TcCWGbT2Eoe72gqUzJdA7vi3/view?usp=sharing",
@@ -33,8 +33,7 @@ export const socialLinks: SocialLinksType = {
   linkedin: "https://www.linkedin.com/in/selvarathinam-g-66863b298/",
   github: "https://github.com/SelvarathinamG",
   instagram: "https://www.instagram.com/soul_of._.single/",
-  // facebook: 'https://www.facebook.com/1hanzla100',
-  // twitter: 'https://twitter.com/1hanzla100',
+  
 };
 
 export const skillsSection: SkillsSectionType = {

@@ -8,17 +8,21 @@ const EducationCard = ({ schoolName, subHeader, duration, desc, grade, descBulle
       <CardBody>
         <div className="d-flex px-3">
           <div className="pl-4">
-            <h5 className="text-info">{schoolName}</h5>
-            <h6>{subHeader}</h6>
-            <Badge color="info" className="mr-1">
+            <h5 className="text-info" style={{ fontSize: "1.3rem" }}>
+              {schoolName}
+            </h5>
+            <h6 style={{ fontSize: "1.05rem" }}>{subHeader}</h6>
+            <Badge color="info" className="mr-1" style={{ fontSize: "0.82rem" }}>
               {duration}
             </Badge>
             {grade && (
-              <Badge color="primary" className="mr-1">
+              <Badge color="primary" className="mr-1" style={{ fontSize: "0.82rem" }}>
                 {grade}
               </Badge>
             )}
-            <p className="description mt-3">{desc}</p>
+            <p className="description mt-3" style={{ fontSize: "1.02rem", lineHeight: 1.75 }}>
+              {desc}
+            </p>
             <ul>
               {descBullets
                 ? descBullets.map(desc => {

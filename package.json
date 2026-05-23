@@ -7,7 +7,7 @@
   "author": "Hanzla Tauqeer",
   "license": "MIT",
   "scripts": {
-    "dev": "next dev",
+    "dev": "set NEXT_IGNORE_INCORRECT_LOCKFILE=1&& next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint *.{js,jsx,ts,tsx}",

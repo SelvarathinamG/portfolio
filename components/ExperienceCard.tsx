@@ -5,35 +5,32 @@ import { ExperienceType } from "../types/sections";
 
 const ExperienceCard = ({ companyLogo, company, role, date, desc, descBullets }: ExperienceType) => {
   return (
-    <Col lg="6">
-      <Card style={{ flex: 1 }} className="shadow-lg--hover my-4 shadow border-0 text-center rounded h-100">
-        <CardBody className="">
+    <Col lg="8" md="10" className="mx-auto">
+      <Card className="shadow-lg--hover my-4 shadow border-0 text-center rounded h-100 d-flex flex-column">
+        <CardBody className="d-flex flex-column align-items-center justify-content-start p-4">
           <img
             src={companyLogo}
             style={{
               objectFit: "cover",
-              left: 0,
-              right: 0,
-              top: "7rem",
               marginLeft: "auto",
               marginRight: "auto",
-              width: "8rem",
-              height: "8rem",
-              borderRadius: "50%",
+              width: "10rem",
+              height: "10rem",
+              borderRadius: "100%",
             }}
             className="shadow mb-3"
             alt={companyLogo}
           />
-          <CardTitle tag="h4" className="mb-2">
+          <CardTitle tag="h3" className="mb-2" style={{ fontSize: "1.75rem", fontWeight: 800 }}>
             {company}
           </CardTitle>
-          <CardSubtitle tag="h5" className="mb-2">
+          <CardSubtitle tag="h5" className="mb-2" style={{ fontSize: "1.15rem", fontWeight: 700 }}>
             {role}
           </CardSubtitle>
-          <CardSubtitle>{date}</CardSubtitle>
-          <CardText tag="div" className="description my-3 text-left">
+          <CardSubtitle style={{ fontSize: "1rem", color: "#6c757d" }}>{date}</CardSubtitle>
+          <CardText tag="div" className="description my-3 text-center w-100" style={{ fontSize: "1.2rem", lineHeight: 1.6 }}>
             {desc}
-            <ul>
+            <ul className="text-left w-100 pl-4" style={{ fontSize: "1.2rem", marginTop: "0.75rem" }}>
               {descBullets
                 ? descBullets.map(desc => {
                     return <li key={desc}>{desc}</li>;
