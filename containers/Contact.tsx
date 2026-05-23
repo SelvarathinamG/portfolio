@@ -55,11 +55,18 @@ const Contact = () => {
         return;
       }
 
-      const response = await emailjs.send(serviceID, templateID, {
+      // Basic client-side validation
+      if (!formData.name || !formData.email || !formData.message) {
+        alert("Please enter your name, email, and a message before sending.");
+        setIsLoading(false);
+        return;
+      }
+
+      const templateParams = {
         to_email: userEmail,
         name: formData.name,
         email: formData.email,
-        subject: formData.subject,
+        subject: formData.subject || `Portfolio message from ${formData.name}`,
         message: formData.message,
         from_name: formData.name,
         from_email: formData.email,
@@ -67,12 +74,17 @@ const Contact = () => {
         sender_name: formData.name,
         sender_email: formData.email,
         email_content: `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`,
-      });
+      };
 
-      if (response.status === 200) {
+      console.debug("EmailJS sending with params:", templateParams);
+
+      const response = await emailjs.send(serviceID, templateID, templateParams);
+
+      if (response && response.status === 200) {
         alert("✓ Message sent successfully! I'll get back to you soon.");
         setFormData(initialState);
       } else {
+        console.warn("EmailJS unexpected response:", response);
         alert("Failed to send message. Please try again.");
       }
     } catch (error) {

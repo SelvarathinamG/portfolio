@@ -7,7 +7,7 @@ import { Fade } from "react-awesome-reveal";
 const Education = () => {
   return (
     educationInfo && (
-      <Fade duration={2000} triggerOnce>
+      <Fade duration={1500} triggerOnce>
         <section className="section pb-0 bg-gradient-info my-5">
           <Container style={{ maxWidth: 1500 }}>
             <div className="d-flex px-3 align-items-center">

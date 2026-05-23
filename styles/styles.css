@@ -5,18 +5,28 @@ body > div:first-child {
 /* Reduce oversized display headings and overall scale on very large viewports */
 @media (min-width: 1200px) {
   html {
-    font-size: 15px; /* slightly smaller base font-size */
+    font-size: 14px; /* reduce base font-size on very large viewports */
   }
 
   .display-1 {
-    font-size: 3.3rem !important;
+    font-size: 3rem !important;
   }
 
   .display-2 {
-    font-size: 2.4rem !important;
+    font-size: 2.2rem !important;
   }
 
   .display-3 {
-    font-size: 1.9rem !important;
+    font-size: 1.6rem !important;
   }
+}
+
+/* Cap lead paragraph size and reduce spacing for hero description */
+.lead {
+  font-size: 1.05rem !important;
+}
+
+/* Reduce large container widths to keep content centered */
+.container {
+  max-width: 1200px !important;
 }
