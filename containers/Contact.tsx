@@ -128,7 +128,7 @@ const Contact = () => {
                       <p className="mb-2 font-weight-bold" style={{ fontSize: "1.5rem" }}>
                         Email
                        </p>
-                      <a className="text-white" href={socialLinks.email} style={{ fontSize: "1rem" }}>
+                      <a className="text-white" href={socialLinks.email} style={{ fontSize: "0.8rem" }}>
                         {contact.emailLabel}
                       </a>
                      
