@@ -3,7 +3,6 @@ import { Button, Card, CardBody, Col, Container, Form, FormGroup, Input, Row } f
 import { Fade } from "react-awesome-reveal";
 import emailjs from "@emailjs/browser";
 import { contact, socialLinks } from "../portfolio";
-import SocialLinks from "../components/SocialLinks";
 
 type ContactFormState = {
   name: string;
@@ -135,9 +134,16 @@ const Contact = () => {
                     </div>
                     <div className="mt-4">
                       <p className="mb-2 font-weight-bold" style={{ fontSize: "1rem" }}>
-                        Social Links
+                        Phone
                       </p>
-                      <SocialLinks />
+                      <a
+                        href="tel:+919025624338"
+                        className="text-white"
+                        style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontSize: "1rem" }}
+                      >
+                        <i className="fa fa-phone" />
+                        {" "}+91 9025624338
+                      </a>
                     </div>
                   </div>
                 </Col>
