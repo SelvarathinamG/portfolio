@@ -125,7 +125,7 @@ const Contact = () => {
                       {contact.description}
                     </p>
                     <div className="mt-4">
-                      <p className="mb-2 font-weight-bold" style={{ fontSize: "1rem" }}>
+                      <p className="mb-2 font-weight-bold" style={{ fontSize: "0.8rem" }}>
                         Email
                       </p>
                       <a className="text-white" href={socialLinks.email}>
@@ -133,7 +133,7 @@ const Contact = () => {
                       </a>
                     </div>
                     <div className="mt-4">
-                      <p className="mb-2 font-weight-bold" style={{ fontSize: "1rem" }}>
+                      <p className="mb-2 font-weight-bold" style={{ fontSize: "0.8rem" }}>
                         Phone
                       </p>
                       <a

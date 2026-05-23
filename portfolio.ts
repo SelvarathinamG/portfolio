@@ -22,7 +22,7 @@ export const openSource = {
 };
 
 export const contact = {
-  title: "Send Me a Message",
+  title: "Connect",
   description:
     "Use the form below to reach me about opportunities, projects, or collaboration. If you prefer, you can also email me directly.",
   emailLabel: "selvarathinamganapathi@gmail.com",
