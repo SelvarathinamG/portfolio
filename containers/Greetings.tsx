@@ -43,7 +43,7 @@ const Greetings = () => {
             <span />
             <span />
           </div>
-          <Container style={{ maxWidth: 1500 }} className="py-lg-md">
+          <Container style={{ maxWidth: 1200 }} className="py-lg-md">
             <Row className="align-items-center justify-content-between" style={{ minHeight: "62vh" }}>
               <Col lg="5" className="hero-copy">
                 <h1 className="display-2" style={heroTitleStyle}>

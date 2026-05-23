@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, CardBody, CardImg, Col, Button } from "reactstrap";
 import { ProjectType } from "../types/sections";
 
 const ProjectsCard = ({ name, desc, github, link, image }: ProjectType) => {
+  const placeholder =
+    "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='640'><rect width='100%' height='100%' fill='%23f5f6fa'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%23999' font-size='36'>No image</text></svg>";
+  const [imgSrc, setImgSrc] = useState<string | undefined>(image);
+
   return (
     <Col lg="6">
       <Card className="shadow-lg--hover shadow mt-4" style={{ overflow: "hidden" }}>
-        {image && (
+        {imgSrc && (
           <CardImg
             top
-            src={image}
+            src={imgSrc}
             alt={name}
+            onError={() => setImgSrc(placeholder)}
             style={{ height: "340px", objectFit: "cover", backgroundColor: "#f5f6fa" }}
           />
         )}

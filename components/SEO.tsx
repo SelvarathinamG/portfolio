@@ -24,6 +24,7 @@ function SEO() {
       <meta property="twitter:title" content={seoData.title} />
       <meta property="twitter:description" content={seoData.description} />
       <meta property="twitter:image" content={seoData.image} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="robots" content="Index" />
       <link rel="manifest" href="/manifest.json" />
       {/* Favicon */}
